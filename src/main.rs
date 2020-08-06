@@ -155,7 +155,7 @@ fn main() {
     */
     loop {
         //wait for new config
-        //JsonNextConfigTime::load().wait();
+        JsonNextConfigTime::load().wait();
         //retrieve config
         let config = JsonConfig::load();
         let mut total_moves = 0;
@@ -186,7 +186,6 @@ fn main() {
             totalMoves: total_moves,
         };
         json_solution.publish();
-        return;
     }
 }
 
